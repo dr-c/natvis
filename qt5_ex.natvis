@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+    <Type Name="QRegion">
+        <DisplayString Condition="*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+0) == 1">
+{{
+ rect = {*reinterpret_cast&lt;QRect*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int)+sizeof(QVector&lt;QRect&gt;)+sizeof(QRect))}
+ area = {*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int))}
+ }}
+        </DisplayString>
+        <DisplayString>
+{{
+ numRects = {*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+0)}
+ extents = {*reinterpret_cast&lt;QRect*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int)+sizeof(QVector&lt;QRect&gt;))}
+ innerRect = {*reinterpret_cast&lt;QRect*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int)+sizeof(QVector&lt;QRect&gt;)+sizeof(QRect))}
+ innerArea = {*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int))}
+ }}
+        </DisplayString>
+        <Expand>
+            <Item Name="ref">d-&gt;ref.atomic._q_value</Item>
+            <Item Name="numRects">*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+0)</Item>
+            <Item Name="innerArea">*reinterpret_cast&lt;int*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int))</Item>
+            <Item Name="rects">*reinterpret_cast&lt;QVector&lt;QRect&gt;*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int))</Item>
+            <Item Name="extents">*reinterpret_cast&lt;QRect*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int)+sizeof(QVector&lt;QRect&gt;))</Item>
+            <Item Name="innerRect">*reinterpret_cast&lt;QRect*&gt;(reinterpret_cast&lt;char*&gt;(d-&gt;qt_rgn)+sizeof(int)+sizeof(int)+sizeof(QVector&lt;QRect&gt;)+sizeof(QRect))</Item>
+        </Expand>
+    </Type>
+</AutoVisualizer>
